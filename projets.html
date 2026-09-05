@@ -66,8 +66,8 @@
           </button>
           <button class="filter-btn" data-filter="graphisme">Graphisme</button>
           <button class="filter-btn" data-filter="video">Montage Vidéo</button>
-          <button class="filter-btn" data-filter="special">Spécial</button>
-          <button class="filter-btn" data-filter="bonus">Bonus</button>
+          <button class="filter-btn" data-filter="special">Concepts</button>
+          <button class="filter-btn" data-filter="divers">Divers</button>
         </div>
       </div>
 
@@ -389,41 +389,125 @@
       <section class="project-group section-alt" data-category="special">
         <div class="wrap">
           <div class="project-group-head">
-            <h2 class="display">expériences</h2>
+            <h2 class="display">La touche à la Thallya </h2> 
+           
             <!-- <span class="project-group-count">02 études de cas</span> -->
           </div>
           <div
             style="display: flex; flex-direction: column; gap: 1.6rem"
             data-reveal-stagger
           >
-            <article class="case-card project-item">
-              <div class="case-media">
-                <img
-                  loading="lazy"
-                  src="assets/images/special-1.png"
-                  alt=""
-                  onerror="
-                    this.parentElement.innerHTML =
-                      '<span class=\'img-placeholder\'>Visuel<br>Projet spécial 1</span>'
-                  "
-                />
-              </div>
-              <div class="case-content">
-                <span class="card-cat">Print</span>
-                <h3 class="card-title" style="font-size: 1.4rem">
-                  Carte de visite - album de musique
-                </h3>
-                <p class="card-desc">
-                  Un chanteur, une carte de visite, et m'est venu l'idée de lier
-                  les deux par un symbole : l'album. <br />
-                  Cœur de tout artiste musical, format carré, l'objet idéal à
-                  détourner en carte de visite.
-                </p>
-                <!-- <a href="#" class="card-link" target="_blank" rel="noopener"
-                  >Découvrir l'étude de cas →</a
-                > -->
-              </div>
-            </article>
+           <p> Une de mes plus grandes passions ? Les objets détournés. Avec une collection de cuillères pelles, une salière Lego ou encore un cache-pot tête de Playmobil, c'est un concept que j'aspire à réaliser, en privé comme dans ma vie professionnelle. <br> Voici quelques exemples de ce que j'ai pu réaliser à l'heure actuelle. </p>
+            <style>
+  .case-card .flip-scene {
+    width: 306.2px;
+    height: 269.7px;
+    perspective: 1200px;
+    transition: transform 0.15s ease-out;
+    margin: 0 auto;
+  }
+
+  .case-card .flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+
+  .case-card .flip-scene:hover .flip-card,
+  .case-card .flip-card.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .case-card .flip-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(255, 0, 200, 0.25),
+      0 0 25px rgba(255, 0, 200, 0.25),
+      0 0 45px rgba(26, 255, 0, 0.8);
+  }
+
+  .case-card .flip-face img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  .case-card .flip-back {
+    transform: rotateY(180deg);
+  }
+</style>
+
+<article class="case-card project-item">
+  <div class="case-media">
+    <div class="flip-scene">
+      <div class="flip-card">
+        <div class="flip-face flip-front">
+          <img
+            loading="lazy"
+            src="assets/images/front.png"
+            alt="Recto de la carte de visite"
+            onerror="
+              this.parentElement.innerHTML =
+                '<span class=\'img-placeholder\'>Visuel<br>Recto</span>'
+            "
+          />
+        </div>
+        <div class="flip-face flip-back">
+          <img
+            loading="lazy"
+            src="assets/images/back.png"
+            alt="Verso de la carte de visite"
+            onerror="
+              this.parentElement.innerHTML =
+                '<span class=\'img-placeholder\'>Visuel<br>Verso</span>'
+            "
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="case-content">
+    <span class="card-cat">Print</span>
+    <h3 class="card-title" style="font-size: 1.4rem">
+      Carte de visite - album de musique
+    </h3>
+    <p class="card-desc">
+      Un chanteur, une carte de visite, et m'est venu l'idée de lier
+      les deux par un symbole : l'album. <br />
+      Cœur de tout artiste musical, format carré, l'objet idéal à
+      détourner en carte de visite.
+    </p>
+  </div>
+</article>
+
+<script>
+  document.querySelectorAll('.flip-scene').forEach((scene) => {
+    const card = scene.querySelector('.flip-card');
+
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+
+    // léger tilt 3D qui suit la souris, pour un effet carte physique
+    scene.addEventListener('mousemove', (e) => {
+      const rect = scene.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      scene.style.transform = `rotateX(${y * -12}deg) rotateY(${x * 12}deg)`;
+    });
+
+    scene.addEventListener('mouseleave', () => {
+      scene.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  });
+</script>
+
             <article class="case-card project-item">
               <div class="case-media">
                 <img
@@ -458,8 +542,8 @@
         </div>
       </section>
 
-      <!-- ============================== BONUS ============================== -->
-      <section class="project-group" data-category="bonus">
+      <!-- ============================== DIVERS ============================== -->
+      <section class="project-group" data-category="divers">
         <div class="wrap">
           <div class="project-group-head">
             <h2 class="display">Divers</h2>
