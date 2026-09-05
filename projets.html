@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>projets — THALLYAX.</title>
+    <meta
+      name="description"
+      content="Sites web, identités graphiques, montages vidéo et projets spéciaux réalisés par Thallyax, UI Designer et développeuse web."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a href="index.html" class="nav-logo">THALLYAX<span>.</span></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="qui-je-suis.html">Qui suis-je?</a></li>
+          <li><a href="projets.html" aria-current="page">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost btn-sm">Me contacter</a>
+      </div>
+      <button
+        class="nav-burger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <!-- ============================== EN-TÊTE ============================== -->
+      <div class="wrap page-header">
+        <p class="eyebrow">Portfolio</p>
+        <h1 class="display" style="font-size: var(--fs-h1); margin-top: 0.8rem">
+          Tous les projets
+        </h1>
+        <p class="lede" style="margin-top: 1rem">
+          Sites web, identités visuelles, montages vidéo et expérimentations. Et
+          tout ça sans Jarvis.
+        </p>
+      </div>
+
+      <!-- ============================== FILTRES ============================== -->
+      <div class="wrap">
+        <div
+          class="filters"
+          role="tablist"
+          aria-label="Filtrer les projets par catégorie"
+        >
+          <button class="filter-btn is-active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="web">
+            Développement Web
+          </button>
+          <button class="filter-btn" data-filter="graphisme">Graphisme</button>
+          <button class="filter-btn" data-filter="video">Montage Vidéo</button>
+          <button class="filter-btn" data-filter="special">Spécial</button>
+          <button class="filter-btn" data-filter="bonus">Bonus</button>
+        </div>
+      </div>
+
+      <!-- ============================== DÉVELOPPEMENT WEB ============================== -->
+      <section class="project-group" data-category="web">
+        <div class="wrap">
+          <div class="project-group-head">
+            <h2 class="display">Développement Web</h2>
+            <!-- <span class="project-group-count">02 projets</span> -->
+          </div>
+          <div class="grid-2" data-reveal-stagger>
+            <!-- 🔧 Remplacer par vos projets de sites web réels -->
+            <article class="card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/web-1.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Capture du site<br>Projet web 1</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat">Site vitrine</span>
+                <h3 class="card-title">Sprint Communication</h3>
+                <p class="card-desc">
+                  Réalisation complète du site : étude des besoins, maquettes,
+                  intégration responsive, optimisation SEO.
+                </p>
+                <div class="card-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">Elementor</span>
+                  <span class="tag">SEO</span>
+                  <span class="tag">html, css, js</span>
+                </div>
+                <div class="card-actions">
+                  <a
+                    href="https://sprint-communication.com/"
+                    class="card-link"
+                    target="_blank"
+                    rel="noopener"
+                    >Découvrir le site →</a
+                  >
+                  <!-- <a href="#" class="card-link muted">Code</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/web-2.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Capture du site<br>Projet web 2</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat">Site artiste</span>
+                <h3 class="card-title">Jethro - Kaléidoscope</h3>
+                <p class="card-desc">
+                  Réalisation complète du projet : identité visuelle, maquettes,
+                  intégration responsive, SEO.
+                </p>
+                <div class="card-tech">
+                  <span class="tag">HTML/CSS/JS</span>
+                  <span class="tag">Elementor</span>
+                  <span class="tag">Responsive</span>
+                </div>
+                <div class="card-actions">
+                  <a href="#" class="card-link" target="_blank" rel="noopener"
+                    >Voir le projet →</a
+                  >
+                  <a href="#" class="card-link muted">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== GRAPHISME ============================== -->
+      <section class="project-group section-alt" data-category="graphisme">
+        <div class="wrap">
+          <div class="project-group-head">
+            <h2 class="display">Graphisme</h2>
+            <!-- <span class="project-group-count">05 projets</span> -->
+          </div>
+          <div class="grid-3" data-reveal-stagger>
+            <article class="card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/graph-1.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Mockup<br>Projet graphique 1</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat1">Identité visuelle</span>
+                <h3 class="card-title">Jethro - Kaléidoscope</h3>
+                <p class="card-desc">
+                  Création fictive de l'identité visuelle : logo, palette,
+                  typographies. Simple, basique.
+                </p>
+              </div>
+            </article>
+            <article class="card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/graph-2.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Mockup<br>Projet graphique 2</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat">Print</span>
+                <h3 class="card-title">Tee-shirt - Rose Festival</h3>
+                <p class="card-desc">
+                  Participation à un concours pour la réalisation d'un design
+                  sur tee-shirt pour le Rose Festival. Je n'ai pas été
+                  sélectionnée mais maintenant j'ai un super tee-shirt.
+                </p>
+              </div>
+            </article>
+            <article class="card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/graph-3.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Mockup<br>Projet graphique 3</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat">Print</span>
+                <h3 class="card-title">Tee-shirt - Visionnaire</h3>
+                <p class="card-desc">
+                  Une autre participation à un concours de design de tee-shirt.
+                  Une nouvelle fois, je n'ai pas été sélectionnée. Mais j'ai un
+                  second super tee-shirt.
+                </p>
+              </div>
+            </article>
+            <article class="card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/graph-4.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Mockup<br>Projet graphique 4</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat">print</span>
+                <h3 class="card-title">Affiche - île d'Oléron</h3>
+                <p class="card-desc">
+                  Conception d'une affiche fictive en flat design représentant
+                  le phare de l'île d'Oléron.
+                </p>
+              </div>
+            </article>
+            <article class="card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/graph-5.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Mockup<br>Projet graphique 5</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat">Print</span>
+                <h3 class="card-title">Affiche concert - Jethro</h3>
+                <p class="card-desc">
+                  Conception d'une affiche fictive pour un concert de l'artiste
+                  Jethro, avec mise en avant de l'identité visuelle et du style
+                  graphique.
+                </p>
+              </div>
+            </article>
+            <article class="card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/graph-6.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Mockup<br>Projet graphique 6</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat">Print</span>
+                <h3 class="card-title">Brochure - Sprint Communication</h3>
+                <p class="card-desc">
+                  Réalisation d'une brochure retraçant mon stage chez Sprint
+                  Communication.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== MONTAGE VIDÉO ============================== -->
+      <section class="project-group" data-category="video">
+        <div class="wrap">
+          <div class="project-group-head">
+            <h2 class="display">Montage Vidéo</h2>
+            <!-- <span class="project-group-count">02 vidéos</span> -->
+          </div>
+          <div class="grid-2" data-reveal-stagger>
+            <article class="card video-card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/video-1.jpg"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Miniature<br>Vidéo 1</span>'
+                  "
+                />
+                <a
+                  href="https://youtube.com/shorts/-miKijaJ7r4?feature=share"
+                  class="video-play"
+                  aria-label="Lire la vidéo 1"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="var(--ink)"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="card-body">
+                <span class="card-cat">Instagram</span>
+                <h3 class="card-title">Où est Charlie? - Rose festival</h3>
+                <p class="card-desc">
+                  Dérush et montage d'une vidéo concept "Où est Charlie?",
+                  collaboration avec Superboumj X Rose Festival.
+                </p>
+              </div>
+            </article>
+            <article class="card video-card project-item">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/video-2.jpg"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Miniature<br>Vidéo 2</span>'
+                  "
+                />
+                <a
+                  href="https://youtube.com/shorts/76qNLfsIEQA?feature=share"
+                  class="video-play"
+                  aria-label="Lire la vidéo 2"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="var(--ink)"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="card-body">
+                <span class="card-cat1">Tiktok</span>
+                <h3 class="card-title">Clip - Le courrier de The Wingzer</h3>
+                <p class="card-desc">
+                  Dérush et montage dynamique d'un clip Twitch pour
+                  l'influenceur The Wingzer.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== SPÉCIAL ============================== -->
+      <section class="project-group section-alt" data-category="special">
+        <div class="wrap">
+          <div class="project-group-head">
+            <h2 class="display">expériences</h2>
+            <!-- <span class="project-group-count">02 études de cas</span> -->
+          </div>
+          <div
+            style="display: flex; flex-direction: column; gap: 1.6rem"
+            data-reveal-stagger
+          >
+            <article class="case-card project-item">
+              <div class="case-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/special-1.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Visuel<br>Projet spécial 1</span>'
+                  "
+                />
+              </div>
+              <div class="case-content">
+                <span class="card-cat">Print</span>
+                <h3 class="card-title" style="font-size: 1.4rem">
+                  Carte de visite - album de musique
+                </h3>
+                <p class="card-desc">
+                  Un chanteur, une carte de visite, et m'est venu l'idée de lier
+                  les deux par un symbole : l'album. <br />
+                  Cœur de tout artiste musical, format carré, l'objet idéal à
+                  détourner en carte de visite.
+                </p>
+                <!-- <a href="#" class="card-link" target="_blank" rel="noopener"
+                  >Découvrir l'étude de cas →</a
+                > -->
+              </div>
+            </article>
+            <article class="case-card project-item">
+              <div class="case-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/special-2.png"
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Visuel<br>Projet spécial 2</span>'
+                  "
+                />
+              </div>
+              <div class="case-content">
+                <span class="card-cat1">Dossier Professionnel</span>
+                <h3 class="card-title" style="font-size: 1.4rem">
+                  enquête criminelle
+                </h3>
+                <p class="card-desc">
+                  Dans le cadre de ma licence, j'ai dû réaliser un dossier
+                  professionnel retraçant les compétences acquises tout au long
+                  de l'année. Loin de moi l'idée de faire un document relié
+                  basique : j'ai crée une enquête criminelle à propos d'une
+                  disparition fictive, dans laquelle le lecteur agit en tant
+                  qu'officier de police et découvre les preuves accumulées dans
+                  ce dossier.
+                </p>
+                <a href="#" class="card-link" target="_blank" rel="noopener"
+                  >Découvrir l'enquête →</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== BONUS ============================== -->
+      <section class="project-group" data-category="bonus">
+        <div class="wrap">
+          <div class="project-group-head">
+            <h2 class="display">Divers</h2>
+            <!-- <span class="project-group-count">Galerie</span> -->
+          </div>
+          <p class="lede" style="margin-bottom: 2rem">
+            Parce que je suis une personne éclectique et qu'il m'est impossible
+            de toucher à un seul domaine, voilà des exemples de diverses
+            expérimentations que j'ai pu réaliser. Une hétéroginité semblable à
+            ma playlist qui enchaîne Rammstein, Patrick Fiori et Gazo.
+          </p>
+
+          <div class="bonus-grid project-item">
+            <!-- 🔧 Remplacer par vos visuels bonus — ajoutez/enlevez des .bonus-item librement -->
+            <div class="bonus-item">
+              <img
+                loading="lazy"
+                src="assets/images/bonus-1.jpg"
+                alt="Photo de concert"
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'img-placeholder\' style=\'padding:3rem 1rem;\'>Concert</span>'
+                "
+              /><span class="card-cat1B">photo de concert</span>
+            </div>
+            <div class="bonus-item">
+              <img
+                loading="lazy"
+                src="assets/images/bonus-2.png"
+                alt="Maquette Figma"
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'img-placeholder\' style=\'padding:4rem 1rem;\'>Figma</span>'
+                "
+              /><span class="card-catf">prototype Figma</span>
+            </div>
+            <div class="bonus-item">
+              <video
+                autoplay
+                loop
+                muted
+                playsinline
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'img-placeholder\' style=\'padding:3.5rem 1rem;\'>Figma</span>'
+                "
+              >
+                <source
+                  src="assets/videos/bonus-3.mp4"
+                  type="video/mp4"
+                /></video
+              ><span class="card-cat">Filtre instagram - bigflo </span>
+            </div>
+            <div class="bonus-item">
+              <img
+                loading="lazy"
+                src="assets/images/bonus-4.jpg"
+                alt="Photo sportive"
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'img-placeholder\' style=\'padding:3.5rem 1rem;\'>Photo sportive</span>'
+                "
+              /><span class="card-cats">Photo sportive</span>
+            </div>
+            <div class="bonus-item">
+              <img
+                loading="lazy"
+                src="assets/images/bonus-5.jpg"
+                alt="Croquis"
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'img-placeholder\' style=\'padding:3rem 1rem;\'>Croquis</span>'
+                "
+              /><span class="card-cat1B">Photo de concert</span>
+            </div>
+            <div class="bonus-item">
+              <img
+                loading="lazy"
+                src="assets/images/bonus-6.jpg"
+                alt="Photo de concert"
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'img-placeholder\' style=\'padding:4rem 1rem;\'>Concert</span>'
+                "
+              /><span class="card-cat1B">photo de Concert</span>
+            </div>
+           <div class="bonus-item">
+              <video
+                autoplay
+                loop
+                muted
+                playsinline
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'img-placeholder\' style=\'padding:3.5rem 1rem;\'>Figma</span>'
+                "
+              >
+                <source
+                  src="assets/videos/bonus-7.mp4"
+                  type="video/mp4"
+                /></video
+              ><span class="card-cat">Filtre - Kev adams </span>
+            </div>
+            <div class="bonus-item">
+            <div class="bonus-item">
+              <img
+                loading="lazy"
+                class="img-tall"
+                src="assets/images/bonus-8.png"
+                alt="Maquette Figma"
+                onerror="
+                  this.parentElement.innerHTML =
+                    '<span class=\'img-placeholder\' style=\'padding:3.5rem 1rem;\'>Figma</span>'
+                "
+              /><span class="card-catf">prototype Figma</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <button class="lightbox-close" aria-label="Fermer">&times;</button>
+      <img src="" alt="" />
+    </div>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <p class="footer-logo">Thallyax<span>.</span></p>
+            <p
+              style="
+                color: var(--green);
+                font-size: 0.85rem;
+                margin-top: 0.6rem;
+                max-width: 32ch;
+              "
+            >
+              UI Designer, graphiste et développeuse web.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="qui-je-suis.html">Qui suis-je?</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="mailto:thallyaer@gmail.com">E-mail</a></li>
+                <li>
+                  <a
+                    href="https://linkedin.com/in/thallya-romero"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/thally4x"
+                    target="_blank"
+                    rel="noopener"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year"></span> Thallyax. Tous droits réservés.</span>
+          <span>Développé avec soin et humour.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+  </body>
+</html>

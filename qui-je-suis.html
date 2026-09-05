@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qui suis-je? - THALLYAX, UI Designer</title>
+    <meta
+      name="description"
+      content="présentation de Thallyax, UI Designer, graphiste et développeuse web."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a href="index.html" class="nav-logo">Thallyax<span>.</span></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li>
+            <a href="qui-je-suis.html" aria-current="page">qui suis-je?</a>
+          </li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost btn-sm">Me contacter</a>
+      </div>
+      <button
+        class="nav-burger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section>
+        <div class="wrap profile-hero">
+          <div class="profile-figure">
+            <img
+              src="assets/images/portrait-large.jpg"
+              alt="Portrait de Thallyax"
+            />
+          </div>
+          <div class="profile-text" data-reveal>
+            <p class="eyebrow">Qui suis-je?</p>
+            <h1 class="display" style="margin-top: 0.8rem">
+              Designeuse d'interfaces & de supports de communication, curieuse de
+              tout.
+            </h1>
+            <p class="lede" style="margin-top: 1.2rem; max-width: 56ch">
+              Ici Thallyax. Titulaire d'une licence en UI Design, j'aime faire
+              de la communication une expérience, à travers des supports pensés
+              immersifs.
+            </p>
+            <p class="profile-quote">
+              « Pour faire des films, t'as juste besoin d'un truc qui filme » -
+              Orelsan
+            </p>
+
+            <div class="parcours-list">
+              <p
+                class="eyebrow"
+                style="margin-top: 1rem; margin-bottom: 0.6rem"
+              >
+                Points clefs de mon parcours
+              </p>
+              <div class="parcours-item">
+                <span class="parcours-date">2025 — 2026 </span>
+                <div>
+                  <p class="parcours-role">Licence UI Design</p>
+                  <p class="parcours-place">Formasup'82</p>
+                </div>
+              </div>
+              <div class="parcours-item">
+                <span class="parcours-date">2026</span>
+                <div>
+                  <p class="parcours-role">
+                    Stage — Réalisation d'un site web WordPress
+                  </p>
+                  <p class="parcours-place">Sprint Communication, Montauban</p>
+                </div>
+                
+              </div>
+              </div>
+              <div class="parcours-item">
+                <span class="parcours-date">2024-2025</span>
+                <div>
+                  <p class="parcours-role">
+                    Monteuse vidéo
+                  </p>
+                  <p class="parcours-place">Superboumj, télétravail </p>
+                </div>
+                
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" data-reveal>
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Mes CV</p>
+            <h2 class="display" style="font-size: var(--fs-h2)">
+              Deux CV, un pour chaque contexte.
+            </h2>
+            <p class="lede">
+              Parce qu'il faut savoir parler à tout le monde. <br />
+              Un CV créatif, synthétisé, reflet de ma personne et de mes
+              objectifs.
+              <br />
+              Un CV classique pour détailler davantage mes expériences.
+            </p>
+          </div>
+
+          <div class="cv-grid" data-reveal-stagger>
+            <article class="cv-option cv-option--creative">
+              <span class="card-cat cv-badge cv-badge--pink">Créatif</span>
+              <h3 class="cv-option-title">CV Design &amp; UI</h3>
+              <p class="cv-option-desc">
+                J'ai longtemps réfléchi à la forme de mon CV créatif. J'ai passé
+                des heures à observer ceux des autres artistes. J'en suis
+                arrivée à la conclusion que ce CV, il devait me représenter.
+                Quoi de mieux qu'une place de concert pour illustrer ma passion
+                pour la musique?
+              </p>
+              <div class="cv-frame cv-frame--pink">
+                <iframe
+                  src="assets/cv/cv-creatif.pdf"
+                  title="Aperçu du CV créatif de Prénom Nom"
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <div class="cv-actions">
+                <a
+                  href="assets/cv/cv-creatif.pdf"
+                  download
+                  class="btn btn-primary btn-sm"
+                >
+                  Télécharger
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 3v13m0 0l-4-4m4 4l4-4M5 21h14" />
+                  </svg>
+                </a>
+                <a
+                  href="assets/cv/cv-creatif.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-ghost btn-sm"
+                  >Plein écran</a
+                >
+              </div>
+            </article>
+
+            <article class="cv-option cv-option--classic">
+              <span class="card-cat cv-badge">Conventionnel</span>
+              <h3 class="cv-option-title">CV Classique</h3>
+              <p class="cv-option-desc">
+                Un CV avec une allure prête à faire fuir n'importe quel designer
+                en herbe. Mais parfois, il faut savoir privilégier le fond
+                plutôt que la forme pour mettre ses compétences et son parcours
+                en avant.
+                <br />
+                Savoir s'ôter de ses artifices. (signé - un ATS)
+              </p>
+              <div class="cv-frame cv-frame--green">
+                <iframe
+                  src="assets/cv/cv-classique.pdf"
+                  title="Aperçu du CV classique de Thallyax"
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <div class="cv-actions">
+                <a
+                  href="assets/cv/cv-classique.pdf"
+                  download
+                  class="btn btn-primary btn-sm1"
+                >
+                  Télécharger
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 3v13m0 0l-4-4m4 4l4-4M5 21h14" />
+                  </svg>
+                </a>
+                <a
+                  href="assets/cv/cv-classique.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-ghost btn-sm"
+                  >Plein écran</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+<!-- ============================== INSPIRATIONS ============================== -->
+<section class="inspirations" id="mon-univers">
+  <div class="wrap">
+    <p class="eyebrow">Ce qui nourrit ma vision</p>
+    <h2 class="display insp-title">Inspirations</h2>
+    <p class="lede insp-intro">
+      De la musique, de la peinture, des animés, mes sources d'inspiration sont variées. J'étanche ma soif de créativité en m'imprégnant de différents univers que je consomme, de mes expériences de vie, et du monde qui m'entoure. 
+    </p>
+
+    <!-- 🔧 Une .insp-category par thème — dupliquez le bloc pour en ajouter -->
+    <div class="insp-category">
+      <span class="insp-label insp-label--pink">Musicales</span>
+      <div class="insp-items">
+        <figure class="insp-item" data-dir="tl" style="--r:-4deg; --d:.05s;">
+          <img src="assets/images/insp-warend.jpg" loading="lazy" alt="Warend" onerror="this.style.display='none'">
+          <figcaption>Warend</figcaption>
+        </figure>
+        <figure class="insp-item" data-dir="up" style="--r:3deg; --d:.15s;">
+          <img src="assets/images/insp-orelsan.jpg" loading="lazy" alt="Orelsan" onerror="this.style.display='none'">
+          <figcaption>Orelsan</figcaption>
+        </figure>
+        <figure class="insp-item" data-dir="tr" style="--r:-2deg; --d:.25s;">
+          <img src="assets/images/insp-bfo.jpg" loading="lazy" alt="Bigflo & Oli" onerror="this.style.display='none'">
+          <figcaption>Bigflo & Oli</figcaption>
+        </figure>
+         <figure class="insp-item" data-dir="tr" style="--r:-5deg; --d:.35s;">
+          <img src="assets/images/insp-theodora.jpg" loading="lazy" alt="Theodora" onerror="this.style.display='none'">
+          <figcaption>Theodora</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="insp-category">
+      <span class="insp-label insp-label--green">Culturelles</span>
+      <div class="insp-items">
+        <figure class="insp-item" data-dir="bl" style="--r:4deg; --d:.05s;">
+          <img src="assets/images/insp-murakami.png" loading="lazy" alt="Takashi Murakami" onerror="this.style.display='none'">
+          <figcaption>Takashi Murakami</figcaption>
+        </figure>
+        <figure class="insp-item" data-dir="up" style="--r:-3deg; --d:.15s;">
+          <img src="assets/images/insp-haring.jpg" loading="lazy" alt="Keith Haring" onerror="this.style.display='none'">
+          <figcaption>Keith Haring</figcaption>
+        </figure>
+        <figure class="insp-item" data-dir="br" style="--r:2deg; --d:.25s;">
+          <img src="assets/images/insp-karl.jpg" loading="lazy" alt="Karl N'da Adopo onerror="this.style.display='none'">
+          <figcaption>Karl N'da Adopo</figcaption>
+        </figure>
+        <figure class="insp-item" data-dir="down" style="--r:-5deg; --d:.35s;">
+          <img src="assets/images/insp-mappa.jpg" loading="lazy" alt="Studio MAPPA" onerror="this.style.display='none'">
+          <figcaption>Studio MAPPA</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="insp-category">
+      <span class="insp-label insp-label--pink">Historiques</span>
+      <div class="insp-items">
+        <figure class="insp-item" data-dir="tl" style="--r:3deg; --d:.05s;">
+          <img src="assets/images/insp-turner.jpg" loading="lazy" alt="Joseph Mallord William Turner" onerror="this.style.display='none'">
+          <figcaption>J. M. W. Turner</figcaption>
+        </figure>
+        <figure class="insp-item" data-dir="up" style="--r:-2deg; --d:.15s;">
+          <img src="assets/images/insp-renoir.jpg" loading="lazy" alt="Auguste Renoir" onerror="this.style.display='none'">
+          <figcaption>Auguste Renoir</figcaption>
+        </figure>
+        <figure class="insp-item" data-dir="tr" style="--r:4deg; --d:.25s;">
+          <img src="assets/images/insp-friedrich.jpg" loading="lazy" alt="Caspar David Friedrich" onerror="this.style.display='none'">
+          <figcaption>C. D. Friedrich</figcaption>
+        </figure>
+        <figure class="insp-item" data-dir="br" style="--r:-3deg; --d:.35s;">
+          <img src="assets/images/insp-monet.jpg" loading="lazy" alt="Claude Monet" onerror="this.style.display='none'">
+          <figcaption>Claude Monet</figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <p class="footer-logo">Thallyax<span>.</span></p>
+            <p
+              style="
+                color: var(--green);
+                font-size: 0.85rem;
+                margin-top: 0.6rem;
+                max-width: 32ch;
+              "
+            >
+              UI Designer, graphiste et développeuse web.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="qui-je-suis.html">Qui suis-je?</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>contact</h4>
+              <ul>
+                <li><a href="mailto:thallyaer@gmail.com">E-mail</a></li>
+                <li>
+                  <a
+                    href="https://linkedin.com/in/thallya-romero
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/thally4x"
+                    target="_blank"
+                    rel="noopener"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span id="year"></span> Thallyax. Tous droits réservés.</span
+          >
+          <span>Développé avec soin et humour.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

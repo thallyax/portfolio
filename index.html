@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THALLYAX. — UI Designer & Créatrice digitale</title>
+    <meta
+      name="description"
+      content="Portfolio de Thallyax, UI Designer, graphiste et développeuse web. Sites vitrines, identités visuelles, montage vidéo — je conçois des expériences digitales intuitives et vivantes."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ============================== NAVIGATION ============================== -->
+    <header class="nav">
+      <a href="index.html" class="nav-logo">THALLYAX<span>.</span></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="qui-je-suis.html">Qui suis-je?</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost btn-sm">Me contacter</a>
+      </div>
+      <button
+        class="nav-burger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <!-- ============================== HERO ============================== -->
+      <section class="hero">
+        <div class="hero-spotlight" aria-hidden="true"></div>
+        <div class="wrap">
+          <p class="eyebrow hero-kicker">
+            UI Designer · Graphiste · Développeuse web
+          </p>
+          <h1 class="display hero-title">
+            Je conçois des interfaces et crée des <em>expériences</em>.
+          </h1>
+          <p class="hero-sub">
+            Des supports de communication, du marketing digital, des interfaces
+            et des sites web.
+          </p>
+          <div class="hero-actions">
+            <a href="projets.html" class="btn btn-primary">
+              Voir mes projets
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H8M17 7V16" />
+              </svg>
+            </a>
+            <a href="contact.html" class="btn btn-ghost">Me contacter</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== À PROPOS (résumé) ============================== -->
+      <section data-reveal>
+        <div class="wrap about-summary">
+          <div class="about-summary-figure">
+            <img
+              src="assets/images/portrait.jpeg"
+              alt="Portrait de Thallyax"
+              class="about-summary-photo"
+            />
+          </div>
+          <div>
+            <p class="eyebrow">À propos</p>
+            <h2
+              class="display"
+              style="font-size: var(--fs-h2); margin-top: 0.8rem"
+            >
+              Formée au design d'interface, animée par l'envie de créer des
+              supports qui ont une âme.
+            </h2>
+            <p class="lede" style="margin-top: 1.2rem">
+              Diplômée en UI Design, je travaille aujourd'hui entre design
+              d'interface, développement front-end, identité graphique et
+              montage vidéo. Chaque projet est une occasion de transformer le
+              numérique en expérience.
+            </p>
+            <a
+              href="qui-je-suis.html"
+              class="btn btn-ghost"
+              style="margin-top: 1.8rem"
+            >
+              En savoir plus
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H8M17 7V16" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" data-reveal>
+        <div class="wrap">
+          <div class="section-head split">
+            <div>
+              <p class="eyebrow">Sélection</p>
+              <h2
+                class="display"
+                style="font-size: var(--fs-h2); margin-top: 0.8rem"
+              >
+                Projets
+              </h2>
+            </div>
+            <a href="projets.html" class="btn btn-ghost btn-sm"
+              >Voir tous les projets</a
+            >
+          </div>
+
+          <div class="grid-4" data-reveal-stagger>
+            <a href="projets.html?cat=web" class="card">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/web-1.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Visuel projet<br>Site web 1</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat">Réalisation site web</span>
+                <h3 class="card-title">Sprint Communication</h3>
+              </div>
+            </a>
+            <a href="projets.html?cat=graphisme" class="card">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/graph-4.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Visuel projet<br>Site web 2</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat-print">Print</span>
+                <h3 class="card-title">Design · carte postale</h3>
+              </div>
+            </a>
+            <a href="projets.html?cat=video" class="card">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/video-1.jpg"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Visuel<br>projet graphique</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat-montage">Montage vidéo</span>
+                <h3 class="card-title">
+                  Où est Charlie ? · Rose Festival X Superboumj
+                </h3>
+              </div>
+            </a>
+            <a href="projets.html?cat=special" class="card">
+              <div class="card-media">
+                <img
+                  loading="lazy"
+                  src="assets/images/special-1.png"
+                  alt=""
+                  onerror="
+                    this.parentElement.innerHTML =
+                      '<span class=\'img-placeholder\'>Visuel<br>projet spécial</span>'
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-cat-cdv">Print</span>
+                <h3 class="card-title">carte de visite</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== MON UNIVERS ============================== -->
+      <section class="home-inspirations" data-reveal>
+        <div class="wrap">
+          <div class="home-insp-top">
+            <div>
+              <p class="eyebrow">Inspirations</p>
+
+              <h2 class="display home-insp-title">
+                Ce qui nourrit<br />
+                mon regard.
+              </h2>
+            </div>
+          </div>
+
+          <div class="home-insp-content">
+            <div class="home-insp-main">
+              <img
+                src="assets/images/insp-murakami.png"
+                alt="Œuvre de Takashi Murakami"
+                loading="lazy"
+              />
+
+              <span class="home-insp-label">Takashi Murakami</span>
+            </div>
+            <div class="home-insp-text">
+              <p class="home-insp-kicker">Une idée ne naît jamais de rien.</p>
+
+              <p>
+                J'observe le monde et nourrit mon regard dans sa complexité, sa
+                simplicité, son adversité.
+              </p>
+
+              <p>
+                J'aime mélanger des univers qui n'étaient pas forcément destinés
+                à se rencontrer.
+              </p>
+
+              <a href="qui-je-suis.html#mon-univers" class="home-insp-button">
+                Découvrir mes inspirations
+                <span>↗</span>
+              </a>
+            </div>
+
+            <div class="home-insp-list">
+              <div class="home-insp-ref">
+                <strong>Musique</strong>
+              </div>
+
+              <div class="home-insp-ref">
+                <strong>Peinture</strong>
+              </div>
+
+              <div class="home-insp-ref">
+                <strong>Design</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="home-insp-marquee">
+            <div>
+              ART <span>✦</span> MUSIQUE <span>✦</span> DESIGN
+              <span>✦</span> CULTURE <span>✦</span> WEB <span>✦</span> ART
+              <span>✦</span> MUSIQUE <span>✦</span> DESIGN <span>✦</span> ART
+              <span>✦</span> MUSIQUE <span>✦</span> DESIGN
+              <span>✦</span> CULTURE <span>✦</span> WEB <span>✦</span> ART
+              <span>✦</span> MUSIQUE <span>✦</span> DESIGN <span>✦</span> ART
+              <span>✦</span> MUSIQUE <span>✦</span> DESIGN
+              <span>✦</span> CULTURE <span>✦</span> WEB <span>✦</span> ART
+              <span>✦</span> MUSIQUE <span>✦</span> DESIGN <span>✦</span> ART
+              <span>✦</span> MUSIQUE <span>✦</span> DESIGN
+              <span>✦</span> CULTURE <span>✦</span> WEB <span>✦</span> ART
+              <span>✦</span> MUSIQUE <span>✦</span> DESIGN <span>✦</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== CONTACT RAPIDE ============================== -->
+      <section class="section-dark grain" data-reveal>
+        <div class="wrap cta-block">
+          <p class="eyebrow">Discutons</p>
+          <h2 class="display">Une idée de projet ?<br />Discutons-en.</h2>
+          <a
+            href="contact.html"
+            class="btn btn-primary"
+            style="background: var(--accent); color: var(--ink)"
+          >
+            Contact
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M7 17L17 7M17 7H8M17 7V16" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <p class="footer-logo">Thallyax<span>.</span></p>
+            <p
+              style="
+                color: var(--green);
+                font-size: 0.85rem;
+                margin-top: 0.6rem;
+                max-width: 32ch;
+              "
+            >
+              UI Designer, graphiste et développeuse web.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="qui-je-suis.html">Qui suis-je?</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contact</h4>
+              <ul>
+                <!-- 🔧 Remplacer par vos liens réels -->
+                <li><a href="mailto:thallyaer@gmail.com">E-mail</a></li>
+                <li>
+                  <a
+                    href="https://linkedin.com/in/thallya-romero"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/thally4x"
+                    target="_blank"
+                    rel="noopener"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year"></span> Thallyax. Tous droits réservés.</span>
+          <span>Développé avec soin et humour.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
