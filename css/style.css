@@ -98,7 +98,7 @@ textarea {
 h1,
 h2,
 h3,
-< h4,
+h4,
 p,
 figure {
   margin: 0;
@@ -1940,4 +1940,21 @@ section {
   .contact-link {
     font-size: 1.2rem;
   }
+}
+
+@font-face {
+  font-family: "Patriot";
+  src: url("../assets/fonts/Patriot-Normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Patriot", sans-serif !important;
 }
