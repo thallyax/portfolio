@@ -1,10 +1,51 @@
 /* -------------------------------------------------------------------- */
 /* 1. VARIABLES                                                          */
 /* -------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Patriot-Light";
+  src: url("../assets/fonts/Patriot-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "Patriot-Normal";
   src: url("../assets/fonts/Patriot-Normal.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patriot-Medium";
+  src: url("../assets/fonts/Patriot-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patriot-Bold";
+  src: url("../assets/fonts/Patriot-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patriot-UltraBold";
+  src: url("../assets/fonts/Patriot-UltraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patriot-Black";
+  src: url("../assets/fonts/Patriot-Black.woff2") format("woff2");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -105,6 +146,7 @@ p,
 figure {
   margin: 0;
   font-family: var(--font-display);
+  font-weight: 700;
 }
 
 a:focus-visible,
@@ -495,39 +537,6 @@ section {
   }
 }
 
-/* Bandeau défilant — ticket de scène, façon backstage pass */
-.ticker {
-  background: var(--pink);
-  color: var(--black);
-  overflow: hidden;
-  white-space: nowrap;
-  border-block: 2px solid var(--black);
-  transform: rotate(-1deg) scale(1.02);
-}
-.ticker-track {
-  display: inline-flex;
-  align-items: center;
-  gap: 2.4rem;
-  padding-block: 0.7rem;
-  animation: tickerScroll 22s linear infinite;
-}
-.ticker-track span {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.02em;
-  display: inline-flex;
-  align-items: center;
-  gap: 2.4rem;
-}
-@keyframes tickerScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 /* -------------------------------------------------------------------- */
 /* 7. SECTIONS COMMUNES                                                  */
 /* -------------------------------------------------------------------- */
@@ -855,7 +864,7 @@ section {
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 2.6vw, 1.9rem);
   text-transform: uppercase;
-  font-weight: 00;
+  font-weight: 700;
   transition:
     padding-left var(--dur-s) var(--ease),
     color var(--dur-s);
@@ -921,6 +930,7 @@ section {
 .insp-label {
   display: inline-block;
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(1.4rem, 3vw, 2.1rem);
   text-transform: uppercase;
   color: var(--black);
@@ -1292,6 +1302,7 @@ section {
 
   display: grid;
   font-family: "var(--font-display)", monospace;
+  font-weight: 500;
 
   grid-template-columns: 35px 1fr;
 
@@ -1317,6 +1328,7 @@ section {
   grid-row: 1 / 3;
 
   font-family: "var(--font-display)", monospace;
+  font-weight: 400;
 
   font-size: 0.58rem;
 
@@ -1650,6 +1662,7 @@ section {
 
 .cv-option-title {
   font-family: var(--font-display);
+  font-weight: 800;
   font-size: 1.35rem;
   text-transform: uppercase;
 }
