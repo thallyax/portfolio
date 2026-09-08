@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------- */
 
 @font-face {
-  font-family: "Patriot-Light";
+  font-family: "Patriot";
   src: url("../assets/fonts/Patriot-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: "Patriot-Normal";
+  font-family: "Patriot";
   src: url("../assets/fonts/Patriot-Normal.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-  font-family: "Patriot-Medium";
+  font-family: "Patriot";
   src: url("../assets/fonts/Patriot-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: "Patriot-Bold";
+  font-family: "Patriot";
   src: url("../assets/fonts/Patriot-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-  font-family: "Patriot-UltraBold";
+  font-family: "Patriot";
   src: url("../assets/fonts/Patriot-UltraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
@@ -43,7 +43,7 @@
 }
 
 @font-face {
-  font-family: "Patriot-Black";
+  font-family: "Patriot";
   src: url("../assets/fonts/Patriot-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
@@ -1230,7 +1230,7 @@ section {
 .home-insp-kicker {
   margin-bottom: 2rem;
 
-  font-family: "var(--font-display)", serif;
+  font-family: "var(--font-display)";
   font-weight: 400;
 
   font-size: clamp(1.5rem, 2.3vw, 2.2rem);
@@ -1254,7 +1254,7 @@ section {
   display: inline-flex;
 
   align-items: center;
-  font-family: "var(--font-body)";
+  font-family: "nunito sans", sans-serif;
 
   justify-content: space-between;
 
