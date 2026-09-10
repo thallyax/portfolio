@@ -1,14 +1,4 @@
-/* ==========================================================================
-   PROJECTS.JS — filtres de la galerie + lightbox de la section Bonus
-   Chargé uniquement sur projets.html
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
-  /* ---------------------------------------------------------------- */
-  /* FILTRES DE CATÉGORIE                                              */
-  /* Chaque groupe de projets porte un data-category ; chaque bouton   */
-  /* de filtre porte un data-filter correspondant ("all" = tout)       */
-  /* ---------------------------------------------------------------- */
   const filterButtons = document.querySelectorAll(".filter-btn");
   const groups = document.querySelectorAll("[data-category]");
 
@@ -25,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.add("is-active");
       applyFilter(btn.dataset.filter);
 
-      // Met à jour l'URL sans recharger la page (pratique pour partager un lien filtré)
       const url = new URL(window.location);
       if (btn.dataset.filter === "all") {
         url.searchParams.delete("cat");
@@ -36,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Applique le filtre présent dans l'URL au chargement (ex : projets.html?cat=graphisme)
   const initialFilter =
     new URLSearchParams(window.location.search).get("cat") || "all";
   const initialBtn = document.querySelector(
@@ -48,16 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   applyFilter(initialFilter);
 
-  /* ---------------------------------------------------------------- */
-  /* LIGHTBOX — galerie Bonus                                          */
-  /* ---------------------------------------------------------------- */
   const lightbox = document.getElementById("lightbox");
   if (lightbox) {
     const lightboxImg = lightbox.querySelector("img");
     const closeBtn = lightbox.querySelector(".lightbox-close");
     const bonusItems = document.querySelectorAll(".bonus-item");
 
-    // Crée l'élément vidéo pour la lightbox une seule fois, à côté de l'image
     const lightboxVideo = document.createElement("video");
     lightboxVideo.controls = true;
     lightboxVideo.style.maxWidth = "88vw";

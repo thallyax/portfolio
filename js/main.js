@@ -1,11 +1,3 @@
-/* ==========================================================================
-   MAIN.JS — comportements communs à toutes les pages
-   1. Navigation (scroll state, menu mobile, lien actif)
-   2. Spotlight du hero (suit le curseur, désactivé si mobile/reduced-motion)
-   3. Révélation au scroll (IntersectionObserver)
-   4. Année du footer
-   ========================================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
   /* ---------------------------------------------------------------- */
   /* 1. NAVIGATION                                                     */
