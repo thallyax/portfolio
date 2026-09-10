@@ -142,10 +142,15 @@ h1,
 h2,
 h3,
 h4,
-p,
 figure {
   margin: 0;
   font-family: var(--font-display);
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  font-family: var(--font-body);
   font-weight: 700;
 }
 
@@ -188,11 +193,14 @@ button:focus-visible,
   height: 2px;
   background: var(--white);
 }
+
 .lede {
+  font-family: var(--font-body);
   font-size: clamp(1.05rem, 1.6vw, 1.25rem);
   color: var(--white);
   font-weight: 500;
 }
+
 .text-gray {
   color: var(--gray);
 }
@@ -484,6 +492,7 @@ section {
 }
 .hero-sub {
   margin-top: 1.8rem;
+  font-family: var(--font-body);
   font-size: clamp(1.05rem, 1.7vw, 1.35rem);
   color: var(--ink-soft);
   max-width: 52ch;
@@ -1131,7 +1140,7 @@ section {
 }
 
 .home-insp-title em {
-  font-family: "var(--font-body)";
+  font-family: var(--font-body);
   font-weight: 400;
   opacity: 0.45;
 }
@@ -1201,8 +1210,7 @@ section {
   color: var(--black);
   border-radius: 20px;
 
-  font-family: "var(--font-display)", monospace;
-
+  font-family: var(--font-display);
   font-size: 0.8rem;
   font-weight: 400;
 
@@ -1227,11 +1235,22 @@ section {
   border: 1px solid var(--green-dim);
 }
 
-.home-insp-kicker {
+.home-insp-kicker-test {
   margin-bottom: 2rem;
+  font-family: var(--font-display);
+  font-weight: 700;
 
-  font-family: "var(--font-display)";
-  font-weight: 400;
+  font-size: clamp(4.5rem, 5.3vw, 5.2rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+}
+
+.home-insp-kicker-test2 {
+  margin-bottom: 2rem;
+  font-family: var(--font-body);
+  font-weight: 700;
 
   font-size: clamp(1.5rem, 2.3vw, 2.2rem);
 
@@ -1254,7 +1273,7 @@ section {
   display: inline-flex;
 
   align-items: center;
-  font-family: "nunito sans", sans-serif;
+  font-family: var(--font-body);
 
   justify-content: space-between;
 
@@ -1301,7 +1320,7 @@ section {
   flex: 1;
 
   display: grid;
-  font-family: "var(--font-display)", monospace;
+  font-family: var(--font-display);
   font-weight: 500;
 
   grid-template-columns: 35px 1fr;
@@ -1327,7 +1346,7 @@ section {
 .home-insp-ref > span {
   grid-row: 1 / 3;
 
-  font-family: "var(--font-display)", monospace;
+  font-family: var(--font-display);
   font-weight: 400;
 
   font-size: 0.58rem;
@@ -1376,7 +1395,7 @@ section {
 .home-insp-marquee div {
   width: max-content;
 
-  font-family: "var(--font-display)", monospace;
+  font-family: var(--font-display);
 
   font-size: 0.65rem;
   font-weight: 400;
