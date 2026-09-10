@@ -1247,11 +1247,8 @@ section {
 .home-insp-kicker-test2 {
   margin-bottom: 2rem;
   font-family: var(--font-body);
-  font-weight: 700;
-  font-size: clamp(1.2rem, 2vw, 1.9rem);
-
+  font-size: clamp(1rem, 1.8vw, 1.7rem);
   line-height: 1;
-
   letter-spacing: -0.035em;
 }
 
@@ -1269,7 +1266,6 @@ section {
   color: var(--ink);
 
   font-size: 0.8rem;
-  text-decoration: underline;
   font-weight: 900;
 
   text-transform: uppercase;
