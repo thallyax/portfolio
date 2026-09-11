@@ -1538,7 +1538,7 @@ section {
   .nav.is-open .nav-links {
     display: flex;
     position: fixed;
-    top: 50px;
+    top: 57px;
     left: 0;
     right: 0;
     bottom: 0;
