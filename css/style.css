@@ -334,15 +334,29 @@ section {
   border-bottom: 1px solid transparent;
   transition:
     padding var(--dur-m) var(--ease),
-    background var(--dur-m),
     border-color var(--dur-m);
 }
-.nav.is-scrolled {
-  padding-block: 0.8rem;
+
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(8, 8, 8, 0.88);
   backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity var(--dur-m);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.nav.is-scrolled {
+  padding-block: 0.8rem;
   border-bottom-color: var(--line);
 }
+.nav.is-scrolled::before {
+  opacity: 1;
+}
+
 .nav-logo {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -1510,26 +1524,28 @@ section {
   .nav-cta .btn {
     display: none;
   }
+
+  .nav {
+    position: fixed;
+  }
+
   .nav-burger {
     display: block;
     position: relative;
     z-index: 110;
   }
+
   .nav.is-open .nav-links {
     display: flex;
     position: fixed;
-
-    top: 64px;
+    top: 50px;
     left: 0;
     right: 0;
     bottom: 0;
-
-    background: var(--bg);
-
+    background: var(--bg, #0a0a0a);
     flex-direction: column;
     padding: 2.5rem var(--gutter);
     gap: 1.6rem;
-
     z-index: 100;
   }
 
@@ -1578,7 +1594,7 @@ section {
   padding-top: 2rem;
 }
 .profile-figure {
-  aspect-ratio: 4/2;
+  aspect-ratio: 4/5;
   border-radius: var(--radius);
   overflow: hidden;
   background:
@@ -1939,6 +1955,11 @@ section {
     grid-template-columns: 1fr;
     padding-top: 7rem;
   }
+
+  .profile-figure {
+    aspect-ratio: 3/2;
+  }
+
   .cv-frame iframe {
     width: 100%;
     height: 100%;

@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------------------------------------------------------------- */
-  /* 2. SPOTLIGHT DU HERO — signature visuelle du portfolio            */
-  /* Un halo lumineux discret suit le curseur, comme une lumière de    */
-  /* scène. Désactivé sur mobile (pas de curseur) et en reduced-motion */
+  /* 2. SPOTLIGHT DU HERO  */
   /* ---------------------------------------------------------------- */
   const spotlight = document.querySelector(".hero-spotlight");
   const prefersReducedMotion = window.matchMedia(
