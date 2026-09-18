@@ -226,7 +226,6 @@ section {
   flex-wrap: wrap;
 }
 
-/* Grain — imite le bruit d'une sérigraphie sur fond sombre */
 .grain {
   position: relative;
 }
@@ -271,8 +270,8 @@ section {
   box-shadow: 4px 4px 0 var(--pink);
 }
 .btn-ghost {
-  border-color: var(--line-strong);
-  color: var(--ink);
+  border-color: var(--green);
+  color: var(--green);
 }
 .btn-ghost:hover {
   border-color: var(--green);
@@ -442,116 +441,907 @@ section {
 /* -------------------------------------------------------------------- */
 /* 6. HERO + TICKER                                                      */
 /* -------------------------------------------------------------------- */
+
+/* =========================================================
+   HERO
+========================================================= */
+
 .hero {
   position: relative;
   min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 6rem;
-  background: var(--bg);
-  isolation: isolate;
+
   overflow: hidden;
+  isolation: isolate;
+
+  background: var(--bg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7rem 0 3rem;
 }
-/* trame de points façon sérigraphie, très discrète */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background-image: radial-gradient(
-    rgba(239, 239, 233, 0.09) 1px,
-    transparent 1px
-  );
-  background-size: 16px 16px;
-  mask-image: radial-gradient(circle at 30% 30%, black, transparent 70%);
-}
-/* halo qui suit le curseur — lumière de scène à deux tons */
+
+/* =========================================================
+   SPOTLIGHT
+========================================================= */
+
 .hero-spotlight {
   position: absolute;
   inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(
-      560px circle at var(--x, 30%) var(--y, 20%),
-      rgba(255, 34, 211, 0.16),
-      transparent 60%
-    ),
-    radial-gradient(
-      420px circle at var(--x, 30%) var(--y, 20%),
-      rgba(0, 255, 26, 0.1),
-      transparent 55%
-    );
+
+  z-index: -2;
+
+  background: radial-gradient(
+    320px circle at var(--x, 30%) var(--y, 20%),
+    rgba(0, 255, 26, 0.3),
+    transparent 55%
+  );
+
   transition: background 0.25s ease-out;
 }
-.hero-kicker {
-  margin-bottom: 1.6rem;
-}
-.hero-title {
-  font-size: var(--fs-hero);
-  max-width: 17ch;
-  text-shadow:
-    3px 0 rgba(255, 34, 211, 0.55),
-    -3px 0 rgba(0, 255, 26, 0.4);
-}
-.hero-title em {
-  font-style: normal;
-  color: var(--pink);
-  -webkit-text-stroke: 1px var(--green);
-}
-.hero-sub {
-  margin-top: 1.8rem;
-  font-family: var(--font-body);
-  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
-  color: var(--ink-soft);
-  max-width: 52ch;
-  font-weight: 500;
-}
-.hero-actions {
-  margin-top: 2.8rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.hero-scroll {
+
+.hero::before {
+  content: "";
+
   position: absolute;
-  bottom: 2.2rem;
-  left: var(--gutter);
+  inset: 0;
+
+  z-index: -3;
+
+  background-image:
+    linear-gradient(rgba(162, 21, 115, 0.085) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 239, 233, 0.085) 1px, transparent 1px);
+
+  background-size: 45px 45px;
+
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+/* =========================================================
+   HEADER
+========================================================= */
+
+.hero-header {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  padding-top: 2rem;
+
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  font-size: 0.7rem;
+  justify-content: space-between;
+
+  z-index: 20;
+}
+
+/* logo */
+
+.hero-logo {
+  color: var(--ink);
+
+  text-decoration: none;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(1.7rem, 2.5vw, 2.6rem);
+
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--gray);
+
+  letter-spacing: -0.04em;
+
+  line-height: 1;
 }
-.hero-scroll-line {
-  width: 1px;
-  height: 34px;
-  background: var(--line);
+
+.hero-logo span {
+  color: var(--pink);
+}
+
+/* navigation */
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+
+  gap: clamp(1.5rem, 3vw, 3.5rem);
+}
+
+.hero-nav a {
   position: relative;
-  overflow: hidden;
+
+  color: var(--ink);
+
+  text-decoration: none;
+
+  font-family: var(--font-body);
+
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+
+  font-weight: 700;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
-.hero-scroll-line::after {
-  content: "";
+
+.hero-nav a:hover {
+  color: var(--pink);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   PERSONNAGE LEGO
+========================================================= */
+
+.hero-character {
   position: absolute;
-  top: -100%;
-  left: 0;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -46%);
+
+  width: min(48vw, 680px);
+  height: min(75vh, 760px);
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+/* LEGO */
+
+.hero-lego {
+  position: relative;
+
+  display: block;
+
   width: 100%;
   height: 100%;
-  background: var(--pink);
-  animation: scrollLine 2.2s var(--ease) infinite;
+
+  object-fit: contain;
+
+  filter: drop-shadow(12px 18px 0 rgba(0, 255, 26, 0.12))
+    drop-shadow(-10px 12px 0 rgba(255, 34, 211, 0.1));
+
+  transform: rotate(2deg);
+
+  transition: transform 0.4s var(--ease);
 }
-@keyframes scrollLine {
-  0% {
-    top: -100%;
+
+.hero-character:hover .hero-lego {
+  transform: rotate(-2deg) translateY(-7px);
+}
+
+/* =========================================================
+   GROSSE TYPOGRAPHIE
+========================================================= */
+
+.hero-words {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 10%;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+/* mots */
+
+.hero-word {
+  position: absolute;
+
+  display: block;
+
+  font-family: var(--font-display);
+
+  font-weight: 900;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.055em;
+
+  white-space: nowrap;
+
+  text-transform: none;
+}
+
+/* ---------------------------------------------------------
+   UI DESIGNER
+--------------------------------------------------------- */
+
+.hero-word-top {
+  left: 4%;
+
+  bottom: 9rem;
+
+  font-size: clamp(1.5rem, 4vw, 5rem);
+
+  color: var(--ink);
+
+  z-index: 4;
+
+  text-shadow: 3px 0 rgba(255, 34, 211, 0.4);
+}
+
+/* ---------------------------------------------------------
+   PORTFOLIO
+--------------------------------------------------------- */
+
+.hero-word-middle {
+  left: 2%;
+
+  bottom: 3.5rem;
+
+  font-size: clamp(5rem, 10vw, 11rem);
+
+  color: var(--pink);
+
+  -webkit-text-stroke: 2px var(--green);
+
+  z-index: 6;
+
+  text-shadow: 5px 5px 0 var(--green);
+}
+
+/* ---------------------------------------------------------
+   DÉVELOPPEUSE
+--------------------------------------------------------- */
+
+.hero-word-bottom {
+  left: 4%;
+
+  bottom: 10%;
+
+  font-size: clamp(1.5rem, 4vw, 5rem);
+
+  color: var(--ink);
+
+  z-index: 7;
+
+  text-shadow: -3px 0 rgba(0, 255, 26, 0.45);
+}
+
+/* =========================================================
+   PETITS LABELS
+========================================================= */
+
+.hero-tag {
+  position: absolute;
+
+  z-index: 10;
+
+  padding: 0.5rem 0.85rem;
+
+  border: 1px solid var(--ink);
+
+  background: var(--bg);
+
+  color: var(--ink);
+
+  font-family: var(--font-body);
+
+  font-size: 0.65rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+/* UI */
+
+.hero-tag-montage {
+  left: 18%;
+
+  top: 31%;
+
+  transform: rotate(-7deg);
+
+  color: var(--pink);
+
+  border-color: var(--pink);
+}
+
+/* WEB */
+
+.hero-tag-web {
+  right: 19%;
+
+  top: 37%;
+
+  transform: rotate(7deg);
+}
+
+/* GRAPHISME */
+
+.hero-tag-graph {
+  right: 8%;
+
+  bottom: 24%;
+
+  transform: rotate(-5deg);
+
+  color: var(--green);
+
+  border-color: var(--green);
+}
+
+/* =========================================================
+   PLUS
+========================================================= */
+
+.hero-plus {
+  position: absolute;
+
+  z-index: 8;
+
+  font-family: var(--font-body);
+
+  font-weight: 900;
+
+  font-size: 2rem;
+}
+
+.hero-plus-one {
+  top: 23%;
+  left: 12%;
+
+  color: var(--pink);
+
+  transform: rotate(15deg);
+}
+
+.hero-plus-two {
+  right: 12%;
+  bottom: 38%;
+
+  color: var(--green);
+
+  transform: rotate(-15deg);
+}
+
+/* =========================================================
+   ÉTOILE
+========================================================= */
+
+.hero-star {
+  position: absolute;
+
+  z-index: 8;
+
+  font-size: 2.5rem;
+
+  font-weight: 900;
+
+  color: var(--pink);
+}
+
+.hero-star-one {
+  right: 28%;
+  top: 22%;
+
+  transform: rotate(15deg);
+}
+
+/* =========================================================
+   FLÈCHE
+========================================================= */
+
+.hero-flower {
+  position: absolute;
+
+  z-index: 8;
+
+  right: 31%;
+  top: 32%;
+
+  font-family: var(--font-body);
+
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  color: var(--green);
+
+  transform: rotate(-12deg);
+}
+
+/* =========================================================
+   BAS
+========================================================= */
+
+.hero-bottom {
+  position: absolute;
+
+  bottom: 1.5rem;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  z-index: 15;
+}
+
+.hero-bottom p {
+  margin: 0;
+
+  font-family: var(--font-body);
+
+  font-size: 0.65rem;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+
+  color: var(--gray);
+}
+
+.hero-scroll {
+  font-family: var(--font-body);
+
+  font-size: 0.65rem;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+
+  color: var(--gray);
+}
+
+/* =========================================================
+   RESPONSIVE — TABLETTE
+========================================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 100svh;
+    padding: 6rem 1.5rem 3rem;
   }
-  60% {
-    top: 100%;
+
+  /* HEADER */
+
+  .hero-header {
+    padding: 1.5rem 1.5rem 0;
   }
-  100% {
-    top: 100%;
+
+  .hero-nav {
+    gap: 1.5rem;
+  }
+
+  .hero-nav a {
+    font-size: 0.95rem;
+  }
+
+  /* LEGO */
+
+  .hero-character {
+    width: min(55vw, 520px);
+    height: min(68vh, 620px);
+
+    transform: translate(-50%, -45%);
+  }
+
+  /* TYPO */
+
+  .hero-word-top {
+    left: 3%;
+    bottom: 8rem;
+
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+
+  .hero-word-middle {
+    left: 1%;
+
+    font-size: clamp(4.5rem, 13vw, 8rem);
+  }
+
+  .hero-word-bottom {
+    left: 3%;
+    bottom: 9%;
+
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+
+  /* TAGS */
+
+  .hero-tag-montage {
+    left: 10%;
+    top: 27%;
+  }
+
+  .hero-tag-web {
+    right: 10%;
+    top: 32%;
+  }
+
+  .hero-tag-graph {
+    right: 7%;
+    bottom: 25%;
+  }
+
+  /* DECORATIONS */
+
+  .hero-plus-one {
+    left: 7%;
+    top: 20%;
+  }
+
+  .hero-plus-two {
+    right: 7%;
+    bottom: 37%;
+  }
+
+  .hero-star-one {
+    right: 20%;
+    top: 18%;
+  }
+
+  .hero-flower {
+    right: 23%;
+    top: 28%;
+  }
+
+  /* BAS */
+
+  .hero-bottom {
+    padding: 0 1.5rem;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 100svh;
+
+    padding: 5.5rem 1rem 2.5rem;
+
+    overflow: hidden;
+  }
+
+  /* =======================================================
+     HEADER
+  ======================================================= */
+
+  .hero-header {
+    padding: 1.25rem 1rem 0;
+  }
+
+  .hero-logo {
+    font-size: 1.65rem;
+  }
+
+  .hero-nav {
+    gap: 0.9rem;
+  }
+
+  .hero-nav a {
+    font-size: 0.8rem;
+  }
+
+  /* =======================================================
+     PERSONNAGE LEGO
+  ======================================================= */
+
+  .hero-character {
+    /*
+      On garde le LEGO assez grand pour qu'il
+      reste le point focal de la hero.
+    */
+
+    width: 78vw;
+    height: 63vh;
+
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-character-bg {
+    width: 82%;
+  }
+
+  .hero-lego {
+    filter: drop-shadow(7px 11px 0 rgba(0, 255, 26, 0.12))
+      drop-shadow(-6px 8px 0 rgba(255, 34, 211, 0.1));
+  }
+
+  /* =======================================================
+     GROSSE TYPO
+  ======================================================= */
+
+  .hero-words {
+    bottom: 12%;
+  }
+
+  /*
+    UI DESIGNER
+  */
+
+  .hero-word-top {
+    left: 3%;
+
+    bottom: 7.5rem;
+
+    font-size: clamp(1.65rem, 8vw, 2.8rem);
+
+    line-height: 0.85;
+  }
+
+  /*
+    PORTFOLIO
+  */
+
+  .hero-word-middle {
+    left: 1%;
+
+    bottom: 3.3rem;
+
+    font-size: clamp(3.7rem, 18vw, 6rem);
+
+    line-height: 0.75;
+
+    -webkit-text-stroke: 1.5px var(--green);
+
+    text-shadow: 3px 3px 0 var(--green);
+  }
+
+  /*
+    DEVELOPPEUSE WEB
+  */
+
+  .hero-word-bottom {
+    left: 3%;
+
+    bottom: 0;
+
+    font-size: clamp(1.45rem, 7.5vw, 2.7rem);
+
+    line-height: 0.85;
+  }
+
+  /* =======================================================
+     PETITS LABELS
+  ======================================================= */
+
+  .hero-tag {
+    padding: 0.4rem 0.65rem;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.07em;
+  }
+
+  .hero-tag-montage {
+    left: 6%;
+
+    top: 25%;
+
+    transform: rotate(-6deg);
+  }
+
+  .hero-tag-web {
+    right: 6%;
+
+    top: 29%;
+
+    transform: rotate(6deg);
+  }
+
+  .hero-tag-graph {
+    right: 5%;
+
+    bottom: 29%;
+
+    transform: rotate(-5deg);
+  }
+
+  /* =======================================================
+     PLUS
+  ======================================================= */
+
+  .hero-plus {
+    font-size: 1.5rem;
+  }
+
+  .hero-plus-one {
+    left: 5%;
+
+    top: 18%;
+
+    transform: rotate(15deg);
+  }
+
+  .hero-plus-two {
+    right: 6%;
+
+    bottom: 40%;
+
+    transform: rotate(-15deg);
+  }
+
+  /* =======================================================
+     ÉTOILE
+  ======================================================= */
+
+  .hero-star {
+    font-size: 1.8rem;
+  }
+
+  .hero-star-one {
+    right: 16%;
+
+    top: 18%;
+
+    transform: rotate(15deg);
+  }
+
+  /* =======================================================
+     FLEUR / SYMBOLE
+  ======================================================= */
+
+  .hero-flower {
+    right: 18%;
+
+    top: 25%;
+
+    font-size: 2.2rem;
+
+    transform: rotate(-12deg);
+  }
+
+  /* =======================================================
+     BAS
+  ======================================================= */
+
+  .hero-bottom {
+    bottom: 1rem;
+
+    padding: 0 1rem;
+  }
+
+  .hero-bottom p,
+  .hero-scroll {
+    font-size: 0.55rem;
+
+    letter-spacing: 0.09em;
+  }
+}
+
+/* =========================================================
+   PETITS TELEPHONES
+========================================================= */
+
+@media (max-width: 390px) {
+  .hero {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .hero-header {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .hero-logo {
+    font-size: 1.45rem;
+  }
+
+  .hero-nav {
+    gap: 0.65rem;
+  }
+
+  .hero-nav a {
+    font-size: 0.72rem;
+  }
+
+  /* LEGO */
+
+  .hero-character {
+    width: 82vw;
+    height: 58vh;
+
+    top: 44%;
+  }
+
+  /* TYPO */
+
+  .hero-word-top {
+    bottom: 7rem;
+
+    font-size: 1.5rem;
+  }
+
+  .hero-word-middle {
+    bottom: 3rem;
+
+    font-size: 17vw;
+
+    -webkit-text-stroke: 1px var(--green);
+
+    text-shadow: 2px 2px 0 var(--green);
+  }
+
+  .hero-word-bottom {
+    font-size: 7vw;
+  }
+
+  /* TAGS */
+
+  .hero-tag {
+    padding: 0.35rem 0.5rem;
+
+    font-size: 0.5rem;
+  }
+
+  .hero-tag-montage {
+    left: 4%;
+    top: 25%;
+  }
+
+  .hero-tag-web {
+    right: 4%;
+    top: 29%;
+  }
+
+  .hero-tag-graph {
+    right: 4%;
+    bottom: 30%;
+  }
+
+  /* DECORATION */
+
+  .hero-plus-one {
+    left: 4%;
+    top: 17%;
+  }
+
+  .hero-plus-two {
+    right: 5%;
+    bottom: 40%;
+  }
+
+  .hero-star-one {
+    right: 13%;
+    top: 17%;
+  }
+
+  .hero-flower {
+    right: 15%;
+    top: 24%;
+  }
+
+  /* BAS */
+
+  .hero-bottom p,
+  .hero-scroll {
+    font-size: 0.48rem;
   }
 }
 
@@ -562,7 +1352,6 @@ section {
   background: var(--bg-alt);
 }
 
-/* Bloc CTA final — traitement le plus "accent" de la page, encadré net */
 .section-dark {
   background: var(--panel);
   border-top: 2px solid var(--pink);
