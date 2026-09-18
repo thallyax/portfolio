@@ -631,7 +631,7 @@ section {
   left: 0;
   right: 0;
 
-  bottom: 10%;
+  bottom: 0%;
 
   z-index: 5;
 
@@ -665,7 +665,7 @@ section {
 .hero-word-top {
   left: 4%;
 
-  bottom: 9rem;
+  bottom: clamp(11rem, 17vh, 11rem);
 
   font-size: clamp(1.5rem, 4vw, 5rem);
 
@@ -683,7 +683,7 @@ section {
 .hero-word-middle {
   left: 2%;
 
-  bottom: 3.5rem;
+  bottom: clamp(4rem, 6vh, 4rem);
 
   font-size: clamp(5rem, 10vw, 11rem);
 
@@ -703,7 +703,7 @@ section {
 .hero-word-bottom {
   left: 4%;
 
-  bottom: 10%;
+  bottom: clamp(0.3rem, 0.8vh, 0.7rem);
 
   font-size: clamp(1.5rem, 4vw, 5rem);
 
@@ -733,7 +733,7 @@ section {
 
   font-family: var(--font-body);
 
-  font-size: 0.65rem;
+  font-size: 0.85rem;
 
   font-weight: 900;
 
@@ -948,7 +948,7 @@ section {
 
   .hero-word-top {
     left: 3%;
-    bottom: 8rem;
+    bottom: 9rem;
 
     font-size: clamp(2rem, 6vw, 4rem);
   }
