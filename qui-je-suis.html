@@ -221,83 +221,204 @@
       </section>
 
 <!-- ============================== INSPIRATIONS ============================== -->
-<section class="inspirations" id="mon-univers">
-  <div class="wrap">
-    <p class="eyebrow">Ce qui nourrit ma vision</p>
-    <h2 class="display insp-title">Inspirations</h2>
-    <p class="lede insp-intro">
-      De la musique, de la peinture, des animés, mes sources d'inspiration sont variées. J'étanche ma soif de créativité en m'imprégnant de différents univers que je consomme, de mes expériences de vie, et du monde qui m'entoure. 
-    </p>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inspirations</title>
 
-    <!-- 🔧 Une .insp-category par thème — dupliquez le bloc pour en ajouter -->
-    <div class="insp-category">
-      <span class="insp-label insp-label--pink">Musicales</span>
-      <div class="insp-items">
-        <figure class="insp-item" data-dir="tl" style="--r:-4deg; --d:.05s;">
-          <img src="assets/images/insp-warend.jpg" loading="lazy" alt="photo du rappeur Warend" onerror="this.style.display='none'">
-          <figcaption>Warend</figcaption>
-        </figure>
-        <figure class="insp-item" data-dir="up" style="--r:3deg; --d:.15s;">
-          <img src="assets/images/insp-orelsan.jpg" loading="lazy" alt="photo du rappeur Orelsan" onerror="this.style.display='none'">
-          <figcaption>Orelsan</figcaption>
-        </figure>
-        <figure class="insp-item" data-dir="tr" style="--r:-2deg; --d:.25s;">
-          <img src="assets/images/insp-bfo.jpg" loading="lazy" alt="photo des rappeurs Bigflo & Oli" onerror="this.style.display='none'">
-          <figcaption>Bigflo & Oli</figcaption>
-        </figure>
-         <figure class="insp-item" data-dir="tr" style="--r:-5deg; --d:.35s;">
-          <img src="assets/images/insp-theodora.jpg" loading="lazy" alt="photo de l'artiste Theodora" onerror="this.style.display='none'">
-          <figcaption>Theodora</figcaption>
-        </figure>
+    <!-- Polices : Anton (display) + Archivo (texte). Retire ce bloc si ton site charge déjà ses propres polices. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="inspirations.css" />
+  </head>
+  <body>
+    <section class="insp" aria-labelledby="insp-title">
+      <div class="insp-shell">
+        <header class="insp-head">
+          <p class="insp-eyebrow" data-reveal>
+          </p>
+          <h2 id="insp-title" class="insp-title" data-reveal>Inspirations</h2>
+          <p class="insp-intro" data-reveal>
+            De la musique, de la peinture, des animés, mes sources d'inspiration sont variées. J'étanche ma soif de créativité en m'imprégnant de différents univers que je consomme, de mes expériences de vie, et du monde qui m'entoure.
+          </p>
+        </header>
+
+        <div class="insp-index">
+          <!-- ---------- Musicales ---------- -->
+          <article class="insp-cat" data-tone="pink" aria-labelledby="cat-musicales">
+            <div class="insp-cat-aside">
+              <span id="cat-musicales" class="insp-label" data-tone="pink" data-reveal>Musicales</span>
+              <span class="insp-kicker" data-reveal>De l'identité artistique à la musique en boucle</span>
+            </div>
+            <ul class="insp-list">
+              <li class="insp-row" data-reveal style="--d: 0s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Warend</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Warend</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-warend.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">Rap</span>
+              </li>
+              <li class="insp-row" data-reveal style="--d: 0.06s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Orelsan</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Orelsan</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-orelsan.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">Rap</span>              </li>
+              <li class="insp-row" data-reveal style="--d: 0.12s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Bigflo &amp; Oli</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Bigflo &amp; Oli</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-bfo.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">Rap</span>
+              </li>
+              <li class="insp-row" data-reveal style="--d: 0.18s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Theodora</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Theodora</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-theodora.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">new gen</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- ---------- Culturelles ---------- -->
+          <article class="insp-cat" data-tone="green" aria-labelledby="cat-culturelles">
+            <div class="insp-cat-aside">
+              <span id="cat-culturelles" class="insp-label" data-tone="green" data-reveal>Culturelles</span>
+              <span class="insp-kicker" data-reveal>Ce qui nourrit l&rsquo;&oelig;il</span>
+            </div>
+            <ul class="insp-list">
+              <li class="insp-row" data-reveal style="--d: 0s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Takashi Murakami</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Takashi Murakami</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-murakami.png" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role"> contemporain</span>
+              </li>
+              <li class="insp-row" data-reveal style="--d: 0.06s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Keith Haring</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Keith Haring</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-haring.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">Pop art</span>
+              </li>
+              <li class="insp-row" data-reveal style="--d: 0.12s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Karl N&rsquo;da Adopo</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Karl N&rsquo;da Adopo</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-karl.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">Pop</span>
+              </li>
+              <li class="insp-row" data-reveal style="--d: 0.18s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Studio MAPPA</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Studio MAPPA</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-mappa.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">studio d'Animation</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- ---------- Historiques ---------- -->
+          <article class="insp-cat" data-tone="pink" aria-labelledby="cat-historiques">
+            <div class="insp-cat-aside">
+              <span id="cat-historiques" class="insp-label" data-tone="pink" data-reveal>Historiques</span>
+              <span class="insp-kicker" data-reveal>Ce qui reste &eacute;ternel</span>
+            </div>
+            <ul class="insp-list">
+              <li class="insp-row" data-reveal style="--d: 0s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">J. M. W. Turner</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">J. M. W. Turner</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-turner.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">Romantisme</span>
+              </li>
+              <li class="insp-row" data-reveal style="--d: 0.06s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Auguste Renoir</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Auguste Renoir</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-renoir.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">Impressionnisme</span>
+              </li>
+              <li class="insp-row" data-reveal style="--d: 0.12s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">C. D. Friedrich</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">C. D. Friedrich</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-friedrich.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">Romantisme</span>
+              </li>
+              <li class="insp-row" data-reveal style="--d: 0.18s">
+                <span class="insp-name-wrap">
+                  <span class="insp-name">Claude Monet</span>
+                  <span class="insp-name insp-name--ghost" aria-hidden="true">Claude Monet</span>
+                </span>
+                <span class="insp-thumb" aria-hidden="true"><img src="assets/images/insp-monet.jpg" alt="" loading="lazy" decoding="async" /></span>
+                <span class="insp-role">Impressionnisme</span>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="insp-category">
-      <span class="insp-label insp-label--green">Culturelles</span>
-      <div class="insp-items">
-        <figure class="insp-item" data-dir="bl" style="--r:4deg; --d:.05s;">
-          <img src="assets/images/insp-murakami.png" loading="lazy" alt="photo de l'artiste Takashi Murakami" onerror="this.style.display='none'">
-          <figcaption>Takashi Murakami</figcaption>
-        </figure>
-        <figure class="insp-item" data-dir="up" style="--r:-3deg; --d:.15s;">
-          <img src="assets/images/insp-haring.jpg" loading="lazy" alt="photo de l'artiste Keith Haring" onerror="this.style.display='none'">
-          <figcaption>Keith Haring</figcaption>
-        </figure>
-        <figure class="insp-item" data-dir="br" style="--r:2deg; --d:.25s;">
-          <img src="assets/images/insp-karl.jpg" loading="lazy" alt="photo de l'artiste Karl N'da Adopo onerror="this.style.display='none'">
-          <figcaption>Karl N'da Adopo</figcaption>
-        </figure>
-        <figure class="insp-item" data-dir="down" style="--r:-5deg; --d:.35s;">
-          <img src="assets/images/insp-mappa.jpg" loading="lazy" alt="photo de l'animé Hell's Paradise, Studio MAPPA" onerror="this.style.display='none'">
-          <figcaption>Studio MAPPA</figcaption>
-        </figure>
-      </div>
-    </div>
 
-    <div class="insp-category">
-      <span class="insp-label insp-label--pink">Historiques</span>
-      <div class="insp-items">
-        <figure class="insp-item" data-dir="tl" style="--r:3deg; --d:.05s;">
-          <img src="assets/images/insp-turner.jpg" loading="lazy" alt="Joseph Mallord William Turner" onerror="this.style.display='none'">
-          <figcaption>J. M. W. Turner</figcaption>
-        </figure>
-        <figure class="insp-item" data-dir="up" style="--r:-2deg; --d:.15s;">
-          <img src="assets/images/insp-renoir.jpg" loading="lazy" alt="Auguste Renoir" onerror="this.style.display='none'">
-          <figcaption>Auguste Renoir</figcaption>
-        </figure>
-        <figure class="insp-item" data-dir="tr" style="--r:4deg; --d:.25s;">
-          <img src="assets/images/insp-friedrich.jpg" loading="lazy" alt="Caspar David Friedrich" onerror="this.style.display='none'">
-          <figcaption>C. D. Friedrich</figcaption>
-        </figure>
-        <figure class="insp-item" data-dir="br" style="--r:-3deg; --d:.35s;">
-          <img src="assets/images/insp-monet.jpg" loading="lazy" alt="Claude Monet" onerror="this.style.display='none'">
-          <figcaption>Claude Monet</figcaption>
-        </figure>
-      </div>
-    </div>
+    <script>
+      (function () {
+        var section = document.querySelector('.insp')
+        if (!section) return
+        var targets = section.querySelectorAll('[data-reveal]')
+        if (!targets.length) return
 
-  </div>
-</section>
+        var reduce =
+          window.matchMedia &&
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+        if (reduce || !('IntersectionObserver' in window)) {
+          // Pas d'animation : on laisse tout visible.
+          return
+        }
+
+        // On "arme" l'animation seulement si le JS tourne :
+        // sans JS, le contenu reste entièrement visible.
+        section.classList.add('insp-armed')
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-in')
+                observer.unobserve(entry.target)
+              }
+            })
+          },
+          { threshold: 0.25, rootMargin: '0px 0px -8% 0px' },
+        )
+
+        targets.forEach(function (el) {
+          observer.observe(el)
+        })
+      })()
+    </script>
+  </body>
+</html>
 
     <footer class="footer">
       <div class="wrap">
