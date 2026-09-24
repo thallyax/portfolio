@@ -726,6 +726,7 @@ section {
   padding: 0.5rem 0.85rem;
 
   border: 1px solid var(--ink);
+  border-radius: 20px;
 
   background: var(--bg);
 
@@ -1717,9 +1718,7 @@ section {
    =========================================================== */
 
 .insp {
-  /* Tokens locaux (n'affectent que la section) */
   --insp-panel: #ffffff;
-  --insp-ink: (var--insp-body);
   --insp-mute: #6f6f68;
   --insp-line: #dcdcda;
   --insp-pink: #ff22d3;
@@ -1817,13 +1816,14 @@ section {
   padding: 0.35rem 0.85rem;
   border-radius: 2px;
   transform: rotate(-2deg);
-  box-shadow: 4px 4px var(--white);
 }
 .insp-label[data-tone="pink"] {
   background: var(--insp-pink);
+  box-shadow: 4px 4px #910d67;
 }
 .insp-label[data-tone="green"] {
   background: var(--insp-green);
+  box-shadow: 4px 4px #096e10;
 }
 
 .insp-kicker {
@@ -1859,7 +1859,7 @@ section {
   padding: clamp(0.9rem, 1.6vw, 1.35rem) 0;
   border-top: 1px solid var(--insp-line);
   cursor: default;
-  z-index: 55;
+  z-index: 1;
 }
 .insp-row:first-child {
   border-top: none;
@@ -1936,7 +1936,7 @@ section {
   right: clamp(3rem, 12vw, 9rem);
   width: clamp(120px, 15vw, 190px);
   aspect-ratio: 4 / 5;
-  z-index: 999;
+  z-index: 10;
   pointer-events: none;
   opacity: 0;
   transform: translateY(-40%) rotate(-4deg) scale(0.92);
@@ -1958,6 +1958,10 @@ section {
 
 /* Interactions au survol (uniquement là où le survol existe) */
 @media (hover: hover) {
+  .insp-row:hover {
+    z-index: 5;
+  }
+
   .insp-row:hover .insp-name {
     transform: translateY(-105%);
   }
@@ -1977,20 +1981,14 @@ section {
   }
 }
 
-/* ---------- Apparition au scroll ----------
-   Le contenu n'est masqué QUE si le JS a "armé" la section
-   (classe .insp-armed). Sans JavaScript, tout reste visible. */
 .insp-armed [data-reveal] {
   opacity: 0;
-  transform: translateY(26px);
-  transition:
-    opacity 0.7s var(--insp-ease),
-    transform 0.7s var(--insp-ease);
+  transition: opacity 0.7s var(--insp-ease);
   transition-delay: var(--d, 0s);
 }
+
 .insp-armed [data-reveal].is-in {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* ---------- Responsive ---------- */
@@ -2397,7 +2395,7 @@ section {
   font-family: var(--font-display);
 
   font-size: 0.65rem;
-  font-weight: 400;
+  font-weight: 600;
 
   letter-spacing: 0.12em;
 
@@ -2697,6 +2695,11 @@ section {
 .cv-option-desc {
   color: var(--ink-soft);
   font-size: 0.92rem;
+}
+
+.cv-frame {
+  width: 305px;
+  height: 155px;
 }
 
 .cv-frame--pink {
